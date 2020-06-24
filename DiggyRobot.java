@@ -1,5 +1,6 @@
 public class DiggyRobot{
 	public static void main(String args[]){
+		final int NORTH = 1,EAST = 2,SOUTH = 3,WEST = 4;
 		int x=0,y=0,directionNum = 0;
 		int multiplierVal[] = {0,1,1,-1,-1};
 		String direction[] = {" ","NORTH","EAST", "SOUTH","WEST"};
