@@ -52,9 +52,9 @@ public class DiggyRobot{
                 		case 'W':
                 		    int multiplier = multiplierVal[directionNum];
 							if(directionNum % 2 == 1){
-							    y = (ch[i+1] * multiplier);
+							    y += (Integer.parseInt(String.valueOf(ch[i+1])) * multiplier);
 							} else {
-							    x = (ch[i+1] * multiplier);
+							    x += (Integer.parseInt(String.valueOf(ch[i+1])) * multiplier);
 								
 							}
 							i++;
