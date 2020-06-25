@@ -52,10 +52,21 @@ public class DiggyRobot{
                 		case 'W':
                 		    int multiplier = multiplierVal[directionNum];
 							if(directionNum % 2 == 1){
-							    y += (Integer.parseInt(String.valueOf(ch[i+1])) * multiplier);
+							    if(Character.isDigit(ch[i+2])){
+							        String num1 = String.valueOf(ch[i+1]) + String.valueOf(ch[i+2]);
+							        y += (Integer.parseInt(num1) * multiplier); 
+							        i++;
+							    }else{
+							       y += (Integer.parseInt(String.valueOf(ch[i+1])) * multiplier); 
+							    }
 							} else {
-							    x += (Integer.parseInt(String.valueOf(ch[i+1])) * multiplier);
-								
+							    if(Character.isDigit(ch[i+2])){
+							        String num1 = String.valueOf(ch[i+1]) + String.valueOf(ch[i+2]);
+							        x += (Integer.parseInt(num1) * multiplier); 
+							        i++;
+							    }else{
+							         x += (Integer.parseInt(String.valueOf(ch[i+1])) * multiplier);
+							    }
 							}
 							i++;
                        		 			break;
